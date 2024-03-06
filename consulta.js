@@ -18,52 +18,42 @@ Buscar.addEventListener("click", function(){
     const result1 = document.getElementById("ingrut").value;        
         const pagoencontrado = lista.find(item => item.Rut === parseInt(result1));
         if( result1 === "") {
-            alert("Ingresar Rut");
+            Swal.fire({
+                icon: "No ingresaste el rut",
+                title: "Favor, Ingrese el Rut",
+                text: "Recuerde que su extención es de 12 números",
+                
+            });         
             return;
         }
+    
         
         
-        
-        if (typeof(pagoencontrado)!=="undefined") {
+if (pagoencontrado) {
             const pagoviernes = document.createElement("div");
             
             pagoviernes.innerHTML =`<p>${pagoencontrado.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>`;
             mostrarbusqueda.appendChild(pagoviernes);
-            localStorage.setItem (pagoencontrado,lista.rut)
-            
-        } else {
-            alert("No se encontró ningún pago.");
+
+            localStorage.setItem(pagoencontrado,result1);
+            console.log(pagoencontrado);
+            result1=JSON.localStorage.getItem("lista")
+            console.log(typeof(result1))
 
             
+            return;  } else {
+            Swal.fire("No se encontró pago para esta semana, vuelva a consultar la semana que viente");
             
+            }
+           
             
-        } 
-        
+           
+    
 
-    }); 
+});        
+ 
   
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

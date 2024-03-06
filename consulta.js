@@ -21,7 +21,7 @@ Buscar.addEventListener("click", function(){
             Swal.fire({
                 icon: "No ingresaste el rut",
                 title: "Favor, Ingrese el Rut",
-                text: "Recuerde que su extención es de 12 números",
+                text: "Recuerde que su extención es de 12 digitos",//en este caso solo puse tres numeros como ejemplo, pero aca el rut tiene 12 digitos.
                 
             });         
             return;

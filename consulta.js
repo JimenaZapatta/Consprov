@@ -35,7 +35,8 @@ if (pagoencontrado) {
             pagoviernes.innerHTML =`<p>${pagoencontrado.Razónsocial} puede pasar el viernes desde 8:30 a 12:00</p>`;
             mostrarbusqueda.appendChild(pagoviernes);
 
-            localStorage.setItem(pagoencontrado,result1);
+         localStorage.setItem(pagoencontrado,JSON.stringify(result1));
+            
             console.log(pagoencontrado);
             result1=JSON.localStorage.getItem("lista")
             console.log(typeof(result1))

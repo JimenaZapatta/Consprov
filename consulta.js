@@ -41,7 +41,7 @@ if (pagoencontrado) {
             console.log(typeof(result1))
 
             
-            return;  } else {
+            return pagoencontrado;  } else {
             Swal.fire("No se encontró pago para esta semana, vuelva a consultar la semana que viente");
             
             }
